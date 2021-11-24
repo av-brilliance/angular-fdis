@@ -15,6 +15,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { CreateAdminComponent } from './pages/admin/create/create.component';
 import { UpdateComponent } from './pages/admin/update/update.component';
 import { CreateBranchComponent } from './branches/create/create.component';
+import { CreateClientsComponent } from './pages/clients/create-clients/create-clients.component';
+import { CreatePerformersComponent } from './pages/performers/create-performers/create-performers.component';
+import { PerformersComponent } from './pages/performers/performers.component';
+import { LoginComponent } from './layouts/login/login.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { CreateBranchComponent } from './branches/create/create.component';
     AdminLayoutComponent,
     CreateAdminComponent,
     UpdateComponent,
-    CreateBranchComponent
+    CreateBranchComponent,
+    CreateClientsComponent,
+    CreatePerformersComponent,
+    PerformersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,

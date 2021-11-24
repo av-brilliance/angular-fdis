@@ -15,6 +15,7 @@ import { NotificationsComponent }   from '../../pages/notifications/notification
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 import { CreateBranchComponent } from 'app/branches/create/create.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { LoginComponent } from '../login/login.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdminComponent,
     ClientsComponent,
     NotificationsComponent,
+    // LoginComponent
     // CreateBranchComponent
   ]
 })

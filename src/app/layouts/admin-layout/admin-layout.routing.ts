@@ -11,12 +11,14 @@ import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 import { CreateAdminComponent } from 'app/pages/admin/create/create.component';
 import { UpdateComponent } from 'app/pages/admin/update/update.component';
 import { CreateBranchComponent } from 'app/branches/create/create.component';
-// import {  } from '../../branches/branches.component';
+import { PerformersComponent } from 'app/pages/performers/performers.component';
+import { CreatePerformersComponent } from 'app/pages/performers/create-performers/create-performers.component';
+import { LoginComponent } from '../login/login.component';
 
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'x',           component: UserComponent },
+    { path: 'login',           component: LoginComponent },
     { path: 'branches',          component: BranchesComponent },
     { path: 'audit',     component: AuditComponent },
     { path: 'admin',          component: AdminComponent },
@@ -26,5 +28,7 @@ export const AdminLayoutRoutes: Routes = [
     { path:'admin/update',component:UpdateComponent},
     {path:'admin/create',component:CreateAdminComponent},
     {path:'branches/create',component:CreateBranchComponent},
+    {path:'performers/create',component:CreatePerformersComponent},
+    {path:'performers',component:PerformersComponent}
 
 ];

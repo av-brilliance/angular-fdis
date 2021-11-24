@@ -13,10 +13,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin',         title: 'Administrators',             icon:'',    class: '' },
     { path: '/branches',          title: 'Branches',              icon:'',      class: '' },
     { path: '/clients',     title: 'Clients',     icon:'',    class: '' },
-    { path: '/performer',          title: 'Performer',      icon:'',  class: '' },
-    { path: '/report',         title: 'Report Texts',        icon:'',    class: '' },
-    { path: '/audit',    title: 'Quality Audit',        icon:'', class: '' },
-    // { path: '/upgrade',       title: 'Upgrade to PRO',    icon:'nc-spaceship',  class: 'active-pro' },
+    { path: '/performers',       title: 'Performers',    icon:'', class: '' },
+    // { path: '/report',         title: 'Report Texts',        icon:'',    class: '' },
+    // { path: '/audit',    title: 'Quality Audit',        icon:'', class: '' },
 ];
 
 @Component({
