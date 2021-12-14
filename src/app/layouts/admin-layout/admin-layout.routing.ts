@@ -14,7 +14,7 @@ import { CreateBranchComponent } from 'app/branches/create/create.component';
 import { PerformersComponent } from 'app/pages/performers/performers.component';
 import { CreatePerformersComponent } from 'app/pages/performers/create-performers/create-performers.component';
 import { LoginComponent } from '../login/login.component';
-
+import { PerformerUpdateComponent } from 'app/pages/performers/performer_update/performer-update.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -23,12 +23,14 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'audit',     component: AuditComponent },
     { path: 'admin',          component: AdminComponent },
     { path: 'clients',           component: ClientsComponent },
+    // {path:'clients'}
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path:'admin/update',component:UpdateComponent},
     {path:'admin/create',component:CreateAdminComponent},
     {path:'branches/create',component:CreateBranchComponent},
     {path:'performers/create',component:CreatePerformersComponent},
-    {path:'performers',component:PerformersComponent}
+    {path:'performers',component:PerformersComponent},
+    {path:'performers/update',component:PerformerUpdateComponent}
 
 ];

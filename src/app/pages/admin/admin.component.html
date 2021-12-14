@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-1 col-md-1">
             <div class="icon-big text-center icon-warning">
-             
+            
             </div>
           </div>
           <div class="col-7 col-md-8">
@@ -61,10 +61,10 @@
             <tbody>
               <tr>
                 <td>
-                  Dakota Rice
+                  <!-- {{n+1}} -->
                 </td>
                 <td>
-                  Niger
+                <!-- {{s.Id | json}} -->
                 </td>
                 <td>
                   Oud-Turnhout
@@ -80,10 +80,13 @@
                   </a>
                 </td>
                 <td class="text-right">
-                  <i class="fas fa-edit"></i><i class="fas fa-edit"></i>
+                  <a routerLink="/admin/update">Edit
+                  </a>
+                   <a routerLink="/admin/reset">Remove
+                  </a> 
                 </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>
                   Minerva Hooper
                 </td>
@@ -220,7 +223,7 @@
                 <td class="text-right">
                   $36,738
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>

@@ -8,11 +8,11 @@
         vertical-align: middle;
 
         &:not(.btn):not(.dropdown-item){
-            color: $white-color;
+            color: $black-color;
         }
 
         &.dropdown-item{
-            color: $default-color;
+            color: $black-color;
         }
     }
 

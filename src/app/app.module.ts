@@ -19,7 +19,9 @@ import { CreateClientsComponent } from './pages/clients/create-clients/create-cl
 import { CreatePerformersComponent } from './pages/performers/create-performers/create-performers.component';
 import { PerformersComponent } from './pages/performers/performers.component';
 import { LoginComponent } from './layouts/login/login.component';
-
+import { HttpClientModule } from "@angular/common/http";
+import { PerformerUpdateComponent } from './pages/performers/performer_update/performer-update.component';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,15 @@ import { LoginComponent } from './layouts/login/login.component';
     CreateClientsComponent,
     CreatePerformersComponent,
     PerformersComponent,
-    LoginComponent
+    LoginComponent,
+    PerformerUpdateComponent,
+  
+   
+
   ],
   imports: [
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
@@ -42,7 +49,7 @@ import { LoginComponent } from './layouts/login/login.component';
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
