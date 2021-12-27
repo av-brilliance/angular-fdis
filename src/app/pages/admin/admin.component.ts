@@ -14,7 +14,7 @@ import {UserService} from "../../Services/user.service";
 
 export class AdminComponent{
 
-     userData:any={};
+     users:any=[];
      foundBooks:any=[];
     
   constructor(
@@ -51,7 +51,11 @@ export class AdminComponent{
         this.APIService.getUsers({}).subscribe(
           res => { 
             // this.foundBooks = res;
-             console.log(res)
+           const  x=res;
+             this.users= x;
+     this.foundBooks=this.users.res
+     
+             console.log(this.foundBooks)
            },
           err => console.error(err), 
           () => console.log('getBooks completed') 

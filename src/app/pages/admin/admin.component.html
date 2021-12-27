@@ -44,12 +44,12 @@
               <th>
                 Last Name
               </th>
-              <th class="text-right">
+              <th >
                 Email address
               </th>
 
               <th>
-              Active
+              <!-- Active -->
             </th>
             <th>
              Reset Password
@@ -59,29 +59,34 @@
             </th>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let x of foundBooks | paginate: { itemsPerPage: 10, currentPage: p } ">
                 <td>
-                  <!-- {{n+1}} -->
+                {{x.UserName}}
                 </td>
                 <td>
-                <!-- {{s.Id | json}} -->
+                  
+                {{x.FirstName}}
                 </td>
                 <td>
-                  Oud-Turnhout
-                </td>
-                <td class="text-right">
-                  $36,738
+                  
+                  {{x.LastName}}
                 </td>
                 <td>
-                  Niger
+                
+                  {{x.EmailAddress}} 
                 </td>
                 <td>
-                  <a routerLink="/admin/reset">reset password
+                
+                  <!-- {{x.LastName}} -->
+                </td>
+                <td>
+                  <a routerLink="/admin/reset/">reset password
                   </a>
                 </td>
-                <td class="text-right">
+                <td>
                   <a routerLink="/admin/update">Edit
                   </a>
+                  <br>
                    <a routerLink="/admin/reset">Remove
                   </a> 
                 </td>
@@ -226,8 +231,21 @@
               </tr> -->
             </tbody>
           </table>
+          <div class="offset-md-4">         
+            <div class="pagination">
+           <pagination-controls (pageChange)="p = $event"></pagination-controls>
+         </div>
+       </div>
         </div>
       </div>
     </div>
 </div>
 </div>
+<!-- <div class="modal-body" style="padding:0px">
+  <div class="alert alert-{{data.mode}}" style="margin-bottom:0px">
+      <button type="button" class="close" data-ng-click="close()" >
+          <span class="glyphicon glyphicon-remove-circle"></span>
+      </button>
+      <strong>{{data.boldTextTitle}}</strong> {{data.textAlert}}
+  </div>
+</div> -->

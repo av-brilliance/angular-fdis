@@ -22,7 +22,7 @@ export class ClientsComponent implements OnInit {
    
    ngOnInit() {
        this.getUse();
-       this.getbyUse(this._id);
+      //  this.getbyUse(this._id);
      
    }
 
@@ -32,30 +32,30 @@ export class ClientsComponent implements OnInit {
 
    getUse(){
        // let  user;
-       this.APIService.getUsers({}).subscribe(res=>{
-         console.log(res);
-         this.userData=res;
+       this.APIService.getUsers_Client().subscribe(res=>{
+        //  console.log(res);
+         this.userData=res.data.order;
        
          // document.getElementById(user).innerHTML = this.userData;
-         // console.log(user)
+         console.log(this.userData)
        
        })
      } 
 
 
-     getbyUse(_id)
-     {
+    //  getbyUse()
+    //  {
 
-       this.APIService.getUsers_Client_byId('2A351F65-BB9B-4FC4-83D1-0E2D816581C7').subscribe(
-         res => { 
-           this.foundBooks = res;
-            console.log(res)
+    //    this.APIService.getUsers_Client_byId('').subscribe(
+    //      res => { 
+    //        this.foundBooks = res;
+    //         console.log(res)
           
-            // this.foundBooks.data.orders[0];
-            // console.log("bhjhj",this.foundBooks.orders[0])
-          },
-         err => console.error(err), 
-         () => console.log('get completed') 
-         );
-    }
+    //         // this.foundBooks.data.orders[0];
+    //         // console.log("bhjhj",this.foundBooks.orders[0])
+    //       },
+    //      err => console.error(err), 
+    //      () => console.log('get completed') 
+    //      );
+    // }
 }

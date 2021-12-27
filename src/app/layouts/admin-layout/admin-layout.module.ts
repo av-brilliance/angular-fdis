@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
@@ -15,14 +17,20 @@ import { NotificationsComponent }   from '../../pages/notifications/notification
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 import { CreateBranchComponent } from 'app/branches/create/create.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { LoginComponent } from '../login/login.component';
+// import { FormsModule } from '@angular/forms'  
+import { ReactiveFormsModule} from '@angular/forms'
+// import { FormBuilder } from '@angular/forms';// import { LoginComponent } from '../login/login.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
+    
+    // FormBuilder
   ],
   declarations: [
     DashboardComponent,

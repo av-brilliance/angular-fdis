@@ -21,10 +21,20 @@ import { PerformersComponent } from './pages/performers/performers.component';
 import { LoginComponent } from './layouts/login/login.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PerformerUpdateComponent } from './pages/performers/performer_update/performer-update.component';
+import { ClientsUpdateComponent } from './pages/clients/clients-update/clients-update.component';
+import { ClientsCreateComponent } from './pages/clients/clients-create/clients-create.component';
+import { EditComponent } from './branches/edit/edit.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
+    // BrowserModule,
+    // NgxPaginationModule,
+    // FormsModule,
     AppComponent,
     AdminLayoutComponent,
     CreateAdminComponent,
@@ -35,11 +45,15 @@ import { PerformerUpdateComponent } from './pages/performers/performer_update/pe
     PerformersComponent,
     LoginComponent,
     PerformerUpdateComponent,
+    ClientsUpdateComponent,
+    ClientsCreateComponent,
+    EditComponent,
   
    
 
   ],
   imports: [
+    NgxPaginationModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(AppRoutes,{
