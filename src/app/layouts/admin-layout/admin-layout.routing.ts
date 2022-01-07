@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -20,6 +21,8 @@ import { PerformerUpdateComponent } from 'app/pages/performers/performer_update/
 import { ClientsUpdateComponent } from 'app/pages/clients/clients-update/clients-update.component';
 import { ClientsCreateComponent } from 'app/pages/clients/clients-create/clients-create.component';
 import { EditComponent } from 'app/branches/edit/edit.component';
+import { PasswordResetComponent } from 'app/pages/password-reset/password-reset.component';
+import { RemoveUserComponent } from 'app/pages/remove-user/remove-user.component'; 
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -27,19 +30,22 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'branches',          component: BranchesComponent },
     { path: 'audit',     component: AuditComponent },
     { path: 'admin',          component: AdminComponent },
+    { path:'update/:id',component:UpdateComponent},
     { path: 'clients',           component: ClientsComponent },
     {path:'clients/create',component:ClientsCreateComponent},
-    {path:'clients/update',component:ClientsUpdateComponent},
+    {path:'clients/update/:id',component:ClientsUpdateComponent},
     
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path:'admin/update',component:UpdateComponent},
+    { path:'admin/update/:id',component:UpdateComponent},
     {path:'admin/create',component:CreateAdminComponent},
     {path:'branches/create',component:CreateBranchComponent},
     
-    {path:'branches/update',component:EditComponent},
+    {path:'branches/update/:id',component:EditComponent},
     {path:'performers/create',component:CreatePerformersComponent},
     {path:'performers',component:PerformersComponent},
-    {path:'performers/update',component:PerformerUpdateComponent}
+    {path:'performers/update/:id',component:PerformerUpdateComponent},
+    {path:'password/reset/:id',component:PasswordResetComponent},
+    {path:'remove/user/:id',component:RemoveUserComponent}
 
 ];

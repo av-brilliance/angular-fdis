@@ -26,8 +26,10 @@ import { ClientsCreateComponent } from './pages/clients/clients-create/clients-c
 import { EditComponent } from './branches/edit/edit.component';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
+import { RemoveUserComponent } from './pages/remove-user/remove-user.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -48,6 +50,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ClientsUpdateComponent,
     ClientsCreateComponent,
     EditComponent,
+    PasswordResetComponent,
+    RemoveUserComponent,
   
    
 
@@ -64,6 +68,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

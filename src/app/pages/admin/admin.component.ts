@@ -51,9 +51,9 @@ export class AdminComponent{
         this.APIService.getUsers({}).subscribe(
           res => { 
             // this.foundBooks = res;
-           const  x=res;
+             const  x=res;
              this.users= x;
-     this.foundBooks=this.users.res
+             this.foundBooks=this.users.res
      
              console.log(this.foundBooks)
            },

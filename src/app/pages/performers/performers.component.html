@@ -129,15 +129,14 @@
                     <!-- Niger -->
                   </td>
                   <td>
-                    <a routerLink="/admin/reset">Reset password
+                    <a [routerLink]="['/password/reset',x.Id]">Reset password
                     </a>
                   </td>
                   <td class="text-right">
-                    <a routerLink="/performers/update">Edit
+                    <a [routerLink]="['/performers/update',x.Id]">Edit
                     </a>
-                     <a routerLink="/performers/reset">Remove
+                     <a [routerLink]="['/remove/user',x.Id]">Remove
                     </a>
-                    <!-- <i class="fas fa-edit"></i><i class="fas fa-edit"></i> -->
                   </td>
                 </tr>
               </tbody>

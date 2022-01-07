@@ -115,17 +115,26 @@
                   <!-- Niger -->
                 </td>
                 <td>
-                  <a routerLink="/clients/reset">reset password
+                  <a [routerLink]="['/password/reset',x.Id]">Reset Password
+                
+                  <!-- <a routerLink="/clients/reset">reset password -->
                   </a>
                 </td>
-                <td class="text-right">
+                <!-- <td class="text-right">
                   <a routerLink="/clients/update">Edit
                   </a>
                    <a routerLink="/clients/reset">Remove
                   </a> 
-                  <!-- <i class="fas fa-edit"></i><i class="fas fa-edit"></i> -->
+                   <i class="fas fa-edit"></i><i class="fas fa-edit"></i>
                 
                 
+                </td> -->
+                <td>
+                  <a [routerLink]="['/clients/update',x.Id]">Edit
+                  </a>
+                  <br>
+                   <a [routerLink]="['/remove/user',x.Id]">Remove
+                  </a> 
                 </td>
               </tr>
               
@@ -142,9 +151,8 @@
 </div>
 </div>
 
-
-
 <!-- <div id="table-component">
+  
   <p>Popular Muscle Cars</p>
   <table>
     <thead>

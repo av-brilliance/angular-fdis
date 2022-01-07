@@ -51,7 +51,7 @@
                  -->
                 <tr *ngFor="let x of foundBooks | paginate: { itemsPerPage: 10, currentPage: p }">
                  <td>
-                 {{i+1}}
+                 {{1}}
                 </td>
                 <td>
                  {{x.BranchName}}
@@ -60,10 +60,10 @@
                   
                 </td>
                 <td class="text-right">
-                  <a routerLink="/branches/update">Edit
+                  <a [routerLink]="['/branches/update',x.Id]">Edit
                   </a>
                   <br>
-                   <a routerLink="/branches/reset">Remove
+                   <a [routerLink]="['/remove/user',x.Id]">Remove
                   </a>
                 </td>
               </tr>

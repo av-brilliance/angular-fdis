@@ -80,14 +80,14 @@
                   <!-- {{x.LastName}} -->
                 </td>
                 <td>
-                  <a routerLink="/admin/reset/">reset password
+                  <a [routerLink]="['/password/reset',x.Id]">Reset Password
                   </a>
                 </td>
                 <td>
-                  <a routerLink="/admin/update">Edit
+                  <a [routerLink]="['/admin/update',x.Id]">Edit
                   </a>
                   <br>
-                   <a routerLink="/admin/reset">Remove
+                   <a [routerLink]="['/admin/reset',x.Id]">Remove
                   </a> 
                 </td>
               </tr>
