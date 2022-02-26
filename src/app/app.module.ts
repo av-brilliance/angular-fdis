@@ -26,17 +26,16 @@ import { ClientsCreateComponent } from './pages/clients/clients-create/clients-c
 import { EditComponent } from './branches/edit/edit.component';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { RemoveUserComponent } from './pages/remove-user/remove-user.component';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
+import { ReactiveFormsModule } from '@angular/forms';
+// import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    // BrowserModule,
-    // NgxPaginationModule,
-    // FormsModule,
     AppComponent,
     AdminLayoutComponent,
     CreateAdminComponent,
@@ -52,14 +51,14 @@ import { RemoveUserComponent } from './pages/remove-user/remove-user.component';
     EditComponent,
     PasswordResetComponent,
     RemoveUserComponent,
-  
-   
-
-  ],
+    ],
   imports: [
     NgxPaginationModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    BrowserModule,
+    ReactiveFormsModule,
+
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
@@ -67,8 +66,7 @@ import { RemoveUserComponent } from './pages/remove-user/remove-user.component';
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule,
-    ReactiveFormsModule
+    FixedPluginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

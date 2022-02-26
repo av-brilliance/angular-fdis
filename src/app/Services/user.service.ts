@@ -11,12 +11,12 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   getPerformers(data:any): Observable<any> {
-    return this.http.get("http://18.156.200.144:8008/user_performers/get", data);
+    return this.http.get("http://localhost:4002/api/v1/dashboard/Performer", data);
   }
   
   
   getBranch(data:any): Observable<any> {
-    return this.http.get("http://18.156.200.144:8008/user_branch/get", data);
+    return this.http.get("http://35.159.10.177:4002/api/v1/dashboard/branch", data);
   }
   
   getUser(userId:any): Observable<any> {
@@ -49,6 +49,12 @@ export class UserService {
     return this.http.patch<any>("http://localhost:4002/api/v1/dashboard/SuperAdmin/"+id, req);
   }
 
+  BranchUpdate(id:any,req:any){
+    console.log(req)
+    console.log(id)
+    return this.http.patch<any>("http://35.159.10.177:4002/api/v1/dashboard/branch/"+id, req);
+  }
+
 
   // delete(id:any){
   //   return this.http.delete<any>(this.apiUrl+"/api/user/"+id);
@@ -68,4 +74,6 @@ export class UserService {
   //  );
   //  return this.pageEmployes;
 //  }
+
+
 } 

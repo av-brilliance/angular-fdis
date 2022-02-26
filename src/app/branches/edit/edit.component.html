@@ -1,4 +1,4 @@
-<form [formGroup]="branch">
+           
     <div class="row">
         <div class="col-md-8">
           <div class="card card-user">
@@ -6,30 +6,32 @@
               <h5 class="card-title">Edit Branches</h5>
             </div>
             <div class="card-body">
-              <form>
-                <div class="row">
+              <form  [formGroup]="ClientForm" class="form"  >
+
+                <div class="row" >
                   <div class="col-md-6 pr-1">
                     <div>
-                      <label>User name</label>
-                      <input type="text" formControlName="UserName"  placeholder="User Name" >
-                    </div>
-                  </div>
+                      <label>Branch Name</label>
+                      <input type="text" formControlName="BranchName"  placeholder="BranchName" >
+                   </div>
                   
+                </div>
                 </div>
                 <div class="row">
                   
               <div class="update ml-auto mr-auto">
-                <button class="btn green-btn btn-block" (click)="save()"> SUBMIT </button>
+                <button type="submit" class="btn green-btn btn-block" (click)="onSubmit()"> SUBMIT </button>
       
               </div>
+                </div>
+              </form>
             </div>
-            </form>
           </div>
         </div>
         </div>
-    </div>
+  
+    
+
+          
     
     
-    
-    
-    </form>

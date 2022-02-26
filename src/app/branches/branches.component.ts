@@ -43,7 +43,7 @@ export class BranchesComponent implements OnInit{
           // console.log(res)
           const  x=res;
           this.users= x;
-          this.foundBooks=this.users.data.order
+          this.foundBooks=this.users.data.rows
   
           console.log(this.foundBooks)
           
