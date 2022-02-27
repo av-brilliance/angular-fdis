@@ -28,33 +28,16 @@ export class AdminComponent{
       
     }
 
-
-
-
-
-    // getUse(){
-    //     // let  user;
-    //     this.APIService.getUsers({}).subscribe(res=>{
-    //       console.log(res);
-    //       this.userData=res;
-        
-    //       // document.getElementById(user).innerHTML = this.userData;
-    //       // console.log(user)
-        
-    //     })
-    //   } 
-
-
       getUse() 
       {
 
-        this.APIService.getUsers({}).subscribe(
+        this.APIService.getAdmin('').subscribe(
           res => { 
             // this.foundBooks = res;
              const  x=res;
              this.users= x;
-             this.foundBooks=this.users.res
-     
+             this.foundBooks=this.users.data
+      console.log(this.users)
              console.log(this.foundBooks)
            },
           err => console.error(err), 

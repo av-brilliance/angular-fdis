@@ -21,7 +21,7 @@ export class ClientsComponent implements OnInit {
     }
    
    ngOnInit() {
-       this.getUse();
+      //  this.getUse();
       //  this.getbyUse(this._id);
      
    }
@@ -30,17 +30,17 @@ export class ClientsComponent implements OnInit {
 
 
 
-   getUse(){
-       // let  user;
-       this.APIService.getUsers_Client().subscribe(res=>{
-        //  console.log(res);
-         this.userData=res.data.order;
+  //  getUse(){
+  //      // let  user;
+  //      this.APIService.getUsers_Client().subscribe(res=>{
+  //       //  console.log(res);
+  //        this.userData=res.data.order;
        
-         // document.getElementById(user).innerHTML = this.userData;
-         console.log(this.userData)
+  //        // document.getElementById(user).innerHTML = this.userData;
+  //        console.log(this.userData)
        
-       })
-     } 
+  //      })
+  //    } 
 
 
     //  getbyUse()

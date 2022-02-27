@@ -19,7 +19,7 @@ export class UserService {
     return this.http.get("http://35.159.10.177:4002/api/v1/dashboard/branch", data);
   }
   
-  getUser(userId:any): Observable<any> {
+  getAdmin(userId:any): Observable<any> {
     return this.http.get("http://localhost:4002/api/v1/dashboard/SuperAdmin/"+userId);
   }
   // localhost:4002/api/v1/dashboard/SuperAdmin/
@@ -55,6 +55,18 @@ export class UserService {
     return this.http.patch<any>("http://35.159.10.177:4002/api/v1/dashboard/branch/"+id, req);
   }
 
+  BranchCreate(id:any,req:any){
+    console.log(req)
+    console.log(id)
+    return this.http.post<any>("http://35.159.10.177:4002/api/v1/dashboard/branch", req);
+  }
+
+  
+  BranchDelete(id:any){
+    // console.log(req)
+    console.log(id)
+    return this.http.delete<any>("http://35.159.10.177:4002/api/v1/dashboard/branch/"+id);
+  }
 
   // delete(id:any){
   //   return this.http.delete<any>(this.apiUrl+"/api/user/"+id);

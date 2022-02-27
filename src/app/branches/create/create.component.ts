@@ -1,10 +1,12 @@
-import { Injectable ,Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {UserService} from "../../Services/user.service";
+import {  Router } from '@angular/router';
 import {
-  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
-  Validators,
+  Validators
 } from "@angular/forms";
 
 
@@ -13,28 +15,55 @@ import {
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
-export class CreateBranchComponent implements OnInit {
-  branch: FormGroup;
-  constructor(
-    private fb: FormBuilder
-  ) { }
 
-  ngOnInit(): void 
-  { 
-    this.createForm();
+
+
+export class CreateBranchComponent implements OnInit {
+  userId:string='';
+  BranchName:string='';
+ 
+
+  public ClientForm: FormGroup;
+
+  constructor(
+    public form: FormBuilder,
+    private APIService : UserService,
+    private activatedRouter:ActivatedRoute,
+    private router: Router
+    // public buildForm() 
+  
+  ) { }
+  
+
+  // constructor() { }
+
+  ngOnInit(): void {
+    this.buildForm();
+
+      
   }
 
-  createForm() {
-    ( this.branch = this.fb.group({
-      UserName : [""],
-    }))}
 
+  onSubmit() {
 
-    save() {
-      
-      let xyzOrder= this.branch.value;
-      console.log(xyzOrder)
-           }
-      
-    
+    console.log('form', this.ClientForm.value)
+  
+    this.APIService.BranchCreate(this.userId,this.ClientForm.value).subscribe(data=>{
+      console.log(data);
+    })
+      this.router.navigateByUrl('/Branch');
+      // this.modal.close(); // close the modal when everything else is done
+
+  }
+
+  
+
+ 
+  public buildForm() {
+    this.ClientForm = this.form.group({
+      BranchName: new FormControl ('', [Validators.required])
+    });
+
+  }
+  
 }

@@ -3,7 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
 import {UserService} from "../../Services/user.service";
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-
 import {  Router } from '@angular/router';
 
 @Component({
@@ -36,7 +35,7 @@ export class EditComponent implements OnInit {
     private APIService : UserService,
     private activatedRouter:ActivatedRoute,
     private router: Router
-    // public buildForm() 
+
   
   ) { }
   
@@ -50,13 +49,6 @@ export class EditComponent implements OnInit {
         this.userId=data.id;
         console.log("xyz",this.userId)
       })
-
-
-    // this.Password='123';
-    // this.APIService.updatePass(this.userId,this.ClientForm.value).subscribe(data=>{
-    //   console.log(data);
-    // })
-      
   }
 
 
