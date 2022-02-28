@@ -68,6 +68,12 @@ export class UserService {
     return this.http.delete<any>("http://35.159.10.177:4002/api/v1/dashboard/branch/"+id);
   }
 
+  PerformerCreate(id:any,req:any){
+    console.log(req)
+    console.log(id)
+    return this.http.post<any>("http://35.159.10.177:4002/api/v1/dashboard/Performer", req);
+  }
+
   // delete(id:any){
   //   return this.http.delete<any>(this.apiUrl+"/api/user/"+id);
 
